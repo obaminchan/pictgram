@@ -1,0 +1,126 @@
+body {
+  background-color: #efefef;
+  font-size: 14px;
+  font-weight: 50;
+  color: #333;
+  margin: 0;
+  margin-right: auto;
+  margin-left: auto;
+  width: 924px;
+}
+
+
+h1, h2, p, {
+  padding:0, 0, 15px, 0;
+}
+
+.date {
+  font-size: 15px;
+  padding: 0, 0, 15px, 0;
+}
+
+.header-title-area {
+  background-color: #fff;
+}
+
+.logo {
+  font-size: 32px;
+  text-align: center;
+  padding: 20px;
+  margin: 0;
+}
+
+.header-navigation {
+  width: 100%;
+  background-color: black;
+  padding: 20px 0;
+  margin: 0;
+}
+
+.header-navigation:after {
+  clear: both;
+  display: block;
+  content: " ";
+}
+
+.header-navigation li {
+  float: left;
+  padding: 0 30px;
+  text-align: center;
+  list-style-type: none;
+}
+
+.header-navigation li a {
+  color: white;
+  text-decoration: none;
+}
+.main {
+  width: 616px;
+  float: left;
+}
+
+.my-image {
+  width: 130px;
+  height: 170px;
+  float: left;
+}
+
+.text-title {
+  font-size: 24px;
+  font-weight: bold;
+  color: blue;
+  margin-top: 0;
+  margin-bottom: 0px;
+}
+
+.main-contents {
+  margin-bottom: 100px;
+}
+.text {
+  margin-bottom: 100px;
+}
+.text-title2 {
+  color: blue;
+  margin-bottom: 40px;
+}
+.card-contents {
+  padding: 40px;
+  display: block;
+  margin-bottom: 0px;
+  background-color: #fff;
+}
+.side {
+  width:  308px;
+  float: left;
+}
+
+.my-image2 {
+  width: 70px;
+  height: 87px;
+  float: left;
+}
+
+footer {
+  background-color: white;
+}
+.copyright {
+  color: #777;
+  text-align: center;
+  margin: 0;
+}
+
+footer{
+  clear: both;
+  display: block;
+  content: " ";
+  text-align: center;
+}
+.article{
+  background-color: #fff;
+  display: flex;
+}
+hr{
+  background-color: white;
+  margin-bottom: 20px;
+  margin-top: 0;
+}
