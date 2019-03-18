@@ -27,6 +27,14 @@ class ImageUploader < CarrierWave::Uploader::Base
   # def scale(width, height)
   #   # do something
   # end
+  def extension_whitelist
+      %w(jpg jpeg gif)
+    end
+
+
+    def size_range
+      1..5.megabytes
+    end
 
   # Create different versions of your uploaded files:
   # version :thumb do
