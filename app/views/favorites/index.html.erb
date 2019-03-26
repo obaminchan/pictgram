@@ -8,7 +8,12 @@
               <%= topic.user.name %>
             </h2>
             <%= image_tag topic.image.url %>
+
+
+            <%= link_to new_comment_path do %>
             <%= image_tag 'icons/comment.png', class: 'topic-index-icon' %>
+            <% end %>
+
             <p class="topic-text">
               <%= topic.description %>
             </p>

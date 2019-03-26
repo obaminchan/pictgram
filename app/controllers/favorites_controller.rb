@@ -5,7 +5,7 @@ class FavoritesController < ApplicationController
 
   def create
     favorite = Favorite.new
-    favorite.user_id = current_user.id
+    favorite.user_id = current_user.id       #favorite.user_idに現在ログインしているuser(current_user)のidを保存
     favorite.topic_id = params[:topic_id]
 
     if favorite.save

@@ -13,10 +13,10 @@ class SessionsController < ApplicationController
     end
   end
 
-  private
-  def log_in(user)
+    private
+     def log_in(user)
     session[:user_id] = user.id
-  end
+     end
 
   def log_out
     session.delete(:user_id)

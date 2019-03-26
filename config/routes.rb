@@ -9,10 +9,12 @@ get    '/login',   to: 'sessions#new'
   post   '/login',   to: 'sessions#create'
   delete '/logout',  to: 'sessions#destroy'
 
-  resources :users
+  resources :users # resources :ソース名  resources メソッドを使うことで、HTTPメソッドとURLとアクションが紐づいたルート定義ができる（$rails routes)で確認
   resources :topics
 
   get 'favorites/index'
   post '/favorites', to: 'favorites#create'
+
+  resources :comments, :only => [:index, :new, :create, :destroy]
 
 end
