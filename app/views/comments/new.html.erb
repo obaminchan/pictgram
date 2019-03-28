@@ -10,9 +10,11 @@
          </div>
 
        <% if logged_in? %>
+       <%= hidden_field_tag :topic_id, @topic_id %>    # hiddenで投稿するときに受け取ったtopic_idをcreateアクションに渡す
        <%= f.submit '投稿', class: 'btn btn-black btn-block' %>
      <% end %>
      <% end %>
+
      </div>
    </div>
  </div>

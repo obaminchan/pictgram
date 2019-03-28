@@ -14,6 +14,7 @@ get    '/login',   to: 'sessions#new'
 
   get 'favorites/index'
   post '/favorites', to: 'favorites#create'
+  delete '/favorites', to: 'favorites#destroy'
 
   resources :comments, :only => [:index, :new, :create, :destroy]
 

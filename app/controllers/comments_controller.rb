@@ -1,16 +1,18 @@
 class CommentsController < ApplicationController
   def index
-    @comments = Comment.all
+   @comment_topics = current_user.comment_topics
   end
 
   def new
   @comment = Comment.new
+  @topic_id = params[:topic_id]   #newアクションでtopic_idをparamsに格納する
   end
 
   def create
   @comment = current_user.comments.new(comment_params)
   @comment.user_id = current_user.id
   @comment.topic_id = params[:topic_id]
+
 
     if @comment.save
       redirect_to comments_path, success: '投稿に成功しました'
@@ -25,10 +27,3 @@ class CommentsController < ApplicationController
          params.require(:comment).permit(:body)
        end
 end
-
-
-
-
-
-favorite.user_id = current_user.id       #favorite.user_idに現在ログインしているuser(current_user)のidを保存
-favorite.topic_id = params[:topic_id]
