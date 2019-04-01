@@ -10,6 +10,7 @@ class FavoritesController < ApplicationController
     favorite.user_id = current_user.id       # favorite.user_idに現在ログインしているuser(current_user)のidを保存
     favorite.topic_id = params[:topic_id]    # params[]はリクエストからコントローラーで値を受け取るときに使う
 
+
     if favorite.save
       redirect_to topics_path, success: 'お気に入りに登録しました'
     else
@@ -20,6 +21,6 @@ class FavoritesController < ApplicationController
   def destroy
     favorite = Favorite.find_by(user_id:current_user.id, topic_id:params[:topic_id])
     favorite.destroy
-     redirect_to topics_path
+    redirect_to topics_path
   end
 end

@@ -1,7 +1,6 @@
 class TopicsController < ApplicationController
   def index
     @topics = Topic.all.includes(:favorite_users)  #全記事の一覧
-    @favorites_count = Favorite.where(topic_id:params[:topic_id]).count
   end
 
 
@@ -18,6 +17,12 @@ class TopicsController < ApplicationController
       flash.now[:danger] = "投稿に失敗しました"
       render :new
     end
+  end
+
+  def destroy
+    @topic = Topic.find_by(user_id:current_user.id, topic_id:params[:topic_id])
+    topic.destroy
+    redirect_to topics_path
   end
 
   private

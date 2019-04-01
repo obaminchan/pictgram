@@ -1,5 +1,6 @@
 <div class="topic-index-wrapper">
   <div class="container">
+
     <% @topics.each do |topic| %>
       <div class="row">
         <div class="col-md-6 col-md-offset-3">
@@ -23,15 +24,21 @@
 
             <% end %>
 
-            <%= @favorites_count %>
+
+            <%= topic.favorite_users.count %>
 
             <%= image_tag 'icons/comment.png', class: 'topic-index-icon' %>
+
             <p class="topic-text">
               <%= topic.description %>
             </p>
+
+
+
           </div>
         </div>
       </div>
    <% end %>
+
   </div>
 </div>
