@@ -23,7 +23,7 @@
               <% end %>
 
             <% end %>
-            
+
             <%= topic.favorite_users.count %>
 
             <%= image_tag 'icons/comment.png', class: 'topic-index-icon' %>
@@ -32,6 +32,11 @@
               <%= topic.description %>
             </p>
 
+            <%= link_to topic_path(), method: :delete do %>
+              <button type="button" class="btn btn-outline-primary">
+              <span class="glyphicon glyphicon-trash" aria-hidden="true"></span> 削除
+              </button>
+            <% end %>
 
 
           </div>

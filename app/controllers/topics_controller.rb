@@ -1,6 +1,6 @@
 class TopicsController < ApplicationController
   def index
-    @topics = Topic.all.includes(:favorite_users)  #全記事の一覧
+    @topics = Topic.all.includes(:favorite_users)  #全記事の一覧       #インスタンス変数・・・インスタンスごとに独立した変数 ”さる”“ぞう”
   end
 
 
@@ -11,6 +11,7 @@ class TopicsController < ApplicationController
   def create
     @topic = current_user.topics.new(topic_params)
 
+
     if @topic.save
       redirect_to topics_path, success: '投稿に成功しました'
     else
@@ -20,8 +21,7 @@ class TopicsController < ApplicationController
   end
 
   def destroy
-    @topic = Topic.find_by(user_id:current_user.id, topic_id:params[:topic_id])
-    topic.destroy
+    @topic =
     redirect_to topics_path
   end
 

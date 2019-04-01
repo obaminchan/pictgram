@@ -1,5 +1,5 @@
 class Topic < ApplicationRecord
-  validates :user_id, presence: true
+  validates :user_id, presence: true             #「誰が」「どの投稿をしたか」 user_id
   validates :description, presence: true
   validates :image, presence: true
 
