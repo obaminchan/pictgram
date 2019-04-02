@@ -14,8 +14,8 @@ class SessionsController < ApplicationController
   end
 
     private
-     def log_in(user)
-    session[:user_id] = user.id
+     def log_in(user)                  #log_inメソッドでsession[:user_id]にログイン情報を保存している
+    session[:user_id] = user.id        #sessionメソッドはRailsにもともと定義されているメソッドで、暗号化して保存するためのメソッド
      end
 
   def log_out

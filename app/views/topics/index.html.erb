@@ -32,10 +32,9 @@
               <%= topic.description %>
             </p>
 
-            <%= link_to topic_path(), method: :delete do %>
-              <button type="button" class="btn btn-outline-primary">
-              <span class="glyphicon glyphicon-trash" aria-hidden="true"></span> 削除
-              </button>
+
+            <%= link_to topic_path(@topic.id), :class => "btn btn-small" do %>
+               削除する
             <% end %>
 
 

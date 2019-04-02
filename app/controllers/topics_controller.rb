@@ -1,7 +1,7 @@
 class TopicsController < ApplicationController
   def index
-    @topics = Topic.all.includes(:favorite_users)  #全記事の一覧       #インスタンス変数・・・インスタンスごとに独立した変数 ”さる”“ぞう”
-  end
+    @topics = Topic.all.includes(:favorite_users)  # 全記事の一覧       #インスタンス変数・・・インスタンスごとに独立した変数 ”さる”“ぞう”
+  end                                              # Railsはtopic_idを自動的に追加してくれる
 
 
   def new
@@ -20,14 +20,19 @@ class TopicsController < ApplicationController
     end
   end
 
-  def destroy
-    @topic =
+  def destory
+    @topic = Topic.find(params[:id])
+    @topic.destroy
     redirect_to topics_path
   end
+
+
+
 
   private
   def topic_params
     params.require(:topic).permit(:image, :description)
   end
+
 
 end

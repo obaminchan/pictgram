@@ -1,2 +1,2 @@
 module SessionsHelper
-end
+end                           #ヘルパーはRailsのビューに自動的にインクルードされる

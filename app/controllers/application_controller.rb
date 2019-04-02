@@ -6,7 +6,7 @@ class ApplicationController < ActionController::Base # ActionControllerってな
   add_flash_types :success, :info, :warning, :danger
 
   def current_user
-    @current_user ||= User.find_by(id: session[:user_id])
+    @current_user ||= User.find_by(id: session[:user_id])  # idが'session[:user_id]'のユーザーが検索されている
   end
 
   def logged_in?
